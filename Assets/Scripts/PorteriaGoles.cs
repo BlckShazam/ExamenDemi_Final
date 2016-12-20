@@ -2,8 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 public class PorteriaGoles : MonoBehaviour {
-	public Text texto;
-
+	
 	public int contador = 0;
 	Text TextoContador;
 	// Use this for initialization
@@ -15,9 +14,11 @@ public class PorteriaGoles : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (contador <= 5) {
+	
+	}
+	void OnTriggerEnter2d (Collider2D objeto){
+		if (objeto.tag == "Pelota" && contador<=5) {
 			contador++;
 		}
-	
 	}
 }
